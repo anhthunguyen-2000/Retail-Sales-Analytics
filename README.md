@@ -102,7 +102,7 @@ Dùng để:
 ---
 
 ## 7. File đính kèm (trong repository)
-- `retail_sales_queries.sql` — Toàn bộ SQL queries  
+- `queries.sql` — Toàn bộ SQL queries  
 - `retail_sales_dashboard.pbix` — File Power BI  
 - `README.md` — Tài liệu mô tả dự án  
 
