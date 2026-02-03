@@ -40,13 +40,13 @@ Dataset gồm **1000 giao dịch**, với các trường:
 ---
 
 ##  3. Xử lý dữ liệu (SQL)  
-### ✔️ Làm sạch dữ liệu  
+### Làm sạch dữ liệu  
 - Chuẩn hóa kiểu dữ liệu (Date, Time, Numeric)  
 - Loại bỏ trùng lặp  
 - Tạo cột Revenue = Unit Price × Quantity  
 - Tạo các trường Month, DayName, Hour để phân tích xu hướng  
 
-### ✔️ Phân tích SQL  
+### Phân tích SQL  
 Dùng để:  
 - Tính doanh thu  
 - Phân tích dòng sản phẩm  
@@ -101,14 +101,14 @@ Dùng để:
 
 ---
 
-## 📂 7. File đính kèm (trong repository)
+## 7. File đính kèm (trong repository)
 - `retail_sales_queries.sql` — Toàn bộ SQL queries  
 - `retail_sales_dashboard.pbix` — File Power BI  
 - `README.md` — Tài liệu mô tả dự án  
 
 ---
 
-## 🧾 8. SQL Queries  
+## 8. SQL Queries  
 Toàn bộ truy vấn SQL của dự án:
 
 ```sql
