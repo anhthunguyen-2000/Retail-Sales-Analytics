@@ -1,115 +1,119 @@
-# Retail Sales Analytics  
+# Retail Sales Analytics
+
 **Tools:** SQL, Power BI  
-**Objective:** Phân tích dữ liệu bán lẻ để xác định các yếu tố ảnh hưởng đến doanh thu, hành vi khách hàng và hiệu suất chi nhánh.
+**Role:** Data Analyst  
+**Dataset Size:** 1,000 transactions  
+
+## Project Objective
+Analyze retail sales data to identify key factors influencing revenue, customer behavior, and branch performance, and translate insights into actionable business recommendations.
 
 ---
 
-## 1. Giới thiệu dự án  
-Dự án nhằm phân tích dữ liệu bán lẻ từ chuỗi siêu thị để trả lời các câu hỏi kinh doanh quan trọng:
-
-- Doanh thu thay đổi như thế nào theo từng tháng?  
-- Chi nhánh nào hoạt động tốt nhất?  
-- Dòng sản phẩm nào bán chạy nhất?  
-- Phương thức thanh toán nào được khách hàng ưa chuộng?  
-
-Dữ liệu được xử lý bằng **SQL**, sau đó trực quan hóa bằng **Power BI** để tạo dashboard.
+## Business Questions
+- How does revenue change over time (monthly)?
+- Which branch performs the best?
+- Which product lines generate the highest sales?
+- Which payment methods are preferred by customers?
 
 ---
 
-## 2. Dataset  
-Dataset gồm **1000 giao dịch**, với các trường:
+## Dataset Overview
+The dataset contains **1,000 retail transactions** with the following fields:
 
-| Column Name    | Data Type | Description |
-|----------------|-----------|-------------|
-| Invoice ID     | String    | Mã hóa đơn duy nhất |
-| Branch         | String    | Chi nhánh (A, B, C) |
-| City           | String    | Thành phố |
-| Customer type  | String    | Loại khách (Member / Normal) |
-| Gender         | String    | Giới tính |
-| Product line   | String    | Nhóm sản phẩm |
-| Unit price     | Float     | Giá bán (USD) |
-| Quantity       | Integer   | Số lượng mua |
-| Date           | Date      | Ngày giao dịch |
-| Time           | Time      | Thời gian |
-| Payment        | String    | Phương thức thanh toán |
-| Tax 5%         | Float     | Thuế |
-| Total          | Float     | Thành tiền |
-| COGS           | Float     | Giá vốn |
-| Rating         | Float     | Đánh giá dịch vụ 1–10 |
-
----
-
-##  3. Xử lý dữ liệu (SQL)  
-### Làm sạch dữ liệu  
-- Chuẩn hóa kiểu dữ liệu (Date, Time, Numeric)  
-- Loại bỏ trùng lặp  
-- Tạo cột Revenue = Unit Price × Quantity  
-- Tạo các trường Month, DayName, Hour để phân tích xu hướng  
-
-### Phân tích SQL  
-Dùng để:  
-- Tính doanh thu  
-- Phân tích dòng sản phẩm  
-- Phương thức thanh toán  
-- Tìm ngày cao nhất/thấp nhất về doanh thu  
-- Phân tích AOV theo nhóm khách hàng  
+| Column Name | Description |
+|------------|-------------|
+| Invoice ID | Unique invoice identifier |
+| Branch | Branch (A, B, C) |
+| City | City |
+| Customer type | Member / Normal |
+| Gender | Customer gender |
+| Product line | Product category |
+| Unit price | Unit price (USD) |
+| Quantity | Quantity purchased |
+| Date | Transaction date |
+| Time | Transaction time |
+| Payment | Payment method |
+| Tax 5% | Tax amount |
+| Total | Total transaction value |
+| COGS | Cost of goods sold |
+| Rating | Customer rating (1–10) |
 
 ---
 
-## 4. Dashboard (Power BI)
+## Data Processing (SQL)
 
-### Các KPI chính  
+### Data Cleaning
+- Standardized data types (Date, Time, Numeric)
+- Removed duplicate records
+- Created **Revenue = Unit Price × Quantity**
+- Generated **Month**, **DayName**, and **Hour** for trend analysis
+
+### SQL Analysis
+SQL was used to:
+- Calculate total revenue
+- Analyze product line performance
+- Analyze payment method contribution
+- Identify highest and lowest revenue days
+- Analyze Average Order Value (AOV) by customer segment
+
+---
+
+## Dashboard (Power BI)
+
+### Key KPIs
 - **Total Revenue:** 307.59K  
-- **Total Quantity:** 5510  
-- **Total Invoice:** 1000  
+- **Total Quantity Sold:** 5,510  
+- **Total Invoices:** 1,000  
 
-### Thành phần dashboard  
-- Revenue by Month  
-- Quantity by Product Line  
-- Revenue by Payment  
-- Branch Performance  
-- Product & Customer Insights  
-
-##  5. Key Insights
-
-### Doanh thu theo tháng  
-- Tháng **January** đạt doanh thu cao nhất.  
-- Doanh thu giảm nhẹ ở **February** nhưng phục hồi vào **March**.
-
-### Dòng sản phẩm  
-- Bán chạy nhất: **Electronic Accessories**, **Food & Beverages**  
-- Thấp nhất: **Health & Beauty**
-
-### Phương thức thanh toán  
-- E-Wallet + Credit Card chiếm **~69%** tổng doanh thu.  
-- Thanh toán tiền mặt chiếm ~31%.
-
-### Chi nhánh  
-- Chi nhánh **C** đứng đầu về doanh thu.  
+### Dashboard Components
+- Revenue by Month
+- Quantity by Product Line
+- Revenue by Payment Method
+- Branch Performance
+- Product & Customer Insights
 
 ---
 
-## 6. Kết luận & Khuyến nghị kinh doanh
+## Key Insights
 
-### Cơ hội tăng trưởng  
-- Tăng tồn kho sản phẩm **Electronic Accessories** vào tháng cao điểm.  
-- Tập trung khuyến mãi cho nhóm **Health & Beauty**.  
-- Khuyến khích thanh toán bằng ví điện tử (ưu đãi, giảm giá).  
+### Revenue Trend
+- **January** recorded the highest revenue.
+- Revenue declined slightly in **February** and recovered in **March**.
 
-### Chi nhánh  
-- Chi nhánh B có thể cải thiện doanh thu bằng hoạt động marketing tại chỗ.  
+### Product Performance
+- Top-selling categories: **Electronic Accessories**, **Food & Beverages**
+- Lowest-performing category: **Health & Beauty**
+
+### Payment Methods
+- **E-Wallets & Credit Cards** contribute ~**69%** of total revenue.
+- Cash payments account for ~**31%**.
+
+### Branch Performance
+- **Branch C** generates the highest revenue.
 
 ---
 
-## 7. File đính kèm (trong repository)
-- `queries.sql` — Toàn bộ SQL queries  
+## Business Recommendations
+
+### Growth Opportunities
+- Increase inventory for **Electronic Accessories** during peak months.
+- Run targeted promotions for **Health & Beauty** products.
+- Encourage digital payments through incentives and discounts.
+
+### Branch Strategy
+- Improve **Branch B** performance through localized marketing initiatives. 
+
+---
+
+## 7. Attachments 
+- `queries.sql` — All SQL queries  
 - `retail_sales_dashboard.pbix` — File Power BI  
-- `README.md` — Tài liệu mô tả dự án  
+- `README.md` — Documentation  
 
 ---
 
 ## 8. SQL Queries  
-Toàn bộ truy vấn SQL của dự án:
+All SQL queries
 
 ```sql
 -- 1. Tổng doanh thu theo từng chi nhánh và thành phố
