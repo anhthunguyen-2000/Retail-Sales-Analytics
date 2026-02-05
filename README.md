@@ -1,7 +1,6 @@
 # Retail Sales Analytics
 
 **Tools:** SQL, Power BI  
-**Role:** Data Analyst  
 **Dataset Size:** 1,000 transactions  
 
 ## Project Objective
